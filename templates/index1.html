@@ -1,0 +1,52 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1 align="center">Предсказание цены дореволюционных рублей</h1>-->
+<!--    <form class="form-inline">-->
+<!--  <div class="form-group" method="POST">-->
+<!--    <label>Input name </label>-->
+<!--    <input type="text" class="form-control" name="name" id="nameInputName2" placeholder="1 рубль">-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label>Input year </label>-->
+<!--    <input type="text" class="form-control" name="year" id="yearInputEmail2" placeholder="1825">-->
+<!--  </div>-->
+<!--   <div class="form-group">-->
+<!--    <label>Input char </label>-->
+<!--    <input type="text" class="form-control" name="char" id="charInputEmail2" placeholder="СПБ">-->
+<!--  </div>-->
+<!--   <div class="form-group">-->
+<!--    <label>Input metall </label>-->
+<!--    <input type="text" class="form-control" name="metall" id="metallInputEmail2" placeholder="Ag">-->
+<!--  </div>-->
+<!--    <div class="form-group">-->
+<!--    <label>Input condition </label>-->
+<!--    <input type="text" class="form-control" name="condition" id="conditionInputEmail2" placeholder="XF">-->
+<!--  </div>-->
+<!--  <button type="submit" class="btn btn-primary" value="str_vsei_xuini">Сделать предсказание</button>-->
+<!--</form>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<center>
+    <div  class="loqin">
+        <h1 align="center">Предсказание цены дореволюционных рублей</h1>
+        <h3>Введите данные монеты для предсказания</h3>
+        <form action="{{url_for('predict')}}" method="post">
+              <input type = 'text' name='year' placeholder="Год монеты" required="required" />
+                <input type = 'text' name='char' placeholder="Буквы на монете" required="required" />
+                <input type = 'text' name='metall'placeholder="Металл" required="required" />
+                <input type = 'text' name='condition'placeholder="Состояние" required="required" />
+
+            <button type="submit" class="btn">Предсказание</button>
+        </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+</center>
